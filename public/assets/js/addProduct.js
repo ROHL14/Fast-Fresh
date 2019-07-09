@@ -65,9 +65,16 @@ $("#save-btn").on("click", function() {
   card.append(img, productName, productPrice, productUnity);
   console.log(card);
 
-  $(".products-list").append(card);
+  $(".products-section").append(card);
 });
 
 function validation(data) {}
 
 /*function convertCanvasToImage(canvas) { 	var image = new Image(); 	image.src = canvas.toDataURL("image/png"); 	return image; }*/
+
+$("#edit-info").on("click", function(event) {
+  event.preventDefault();
+  $(
+    "#name, #password, #phone-number, #address, #zip-code, #city, #state"
+  ).removeClass("remove-edit");
+});
