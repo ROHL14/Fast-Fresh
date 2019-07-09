@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="assets/style/style.css" />
+  <!--Fontawesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+  <title>Fast & Fresh</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="/">F n F</a>
+
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Markets Lists
+        </a>
+        <div class="dropdown-menu" id="markets-list">
+        </div>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Accounts
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/farmer-account">Create a farmer account</a>
+          <a class="dropdown-item" href="/shopper-account">Create a shopper account</a>
+          <a class="dropdown-item" href="/customer-account">Create a customer account</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="login" href="#">Login</a>
+      </li>
+    </ul>
+    <div class="col-1"></div>
+  </nav>
+  <div class="header">
+    <p id="title-1">
+      pick and put in your basket and have ready or deliver
+    </p>
+    <p id="main-title">Fast & Fresh</p>
+    <p id="title-2">from the farm to your table</p>
+    <div class="search-container">
+      <form>
+        <input type="text" placeholder="enter zip code" id="zip-market" name="zip-market">
+        <button id="search-market" type="submit"><i class="fas fa-search"></i></button><br>
+      </form>
+    </div>
+  </div>
+  <div class="info-section">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front" id="info-1">
+          set <br />
+          your<br />
+          stall
+        </div>
+        <div class="flip-card-back">
+          <p>
+            If your are a local producer or goods like produce, diary, crafts, or delicious homemade food and would
+            like to
+            market them online for the day you are open on a Farmers Market. Here is the place to create your online
+            stall!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front" id="info-2">
+          <p>
+            active helper
+            <br />
+            fill baskets for pick up
+          </p>
+        </div>
+        <div class="flip-card-back">
+          <p>
+            You want to make extra money, come to a Farmers Market and get online orders ready, for locals to just
+            grab
+            their basket of fresh products!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front" id="info-3">
+          shop<br />
+          fresh
+        </div>
+        <div class="flip-card-back">
+          <p>
+            Consume resh local products, and have them ready for you, just to pick up. Order online and save time
+            shopping at local Farmer Markets Places in your city or town.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade bd-example-modal-lg" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="ModalTitle">Select Favorite Market</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <!-- Camera -->
+            <main id="modal-markets">
+              <div class="row">
+                <div class="col-12">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Address</th>
+                        <th scope="col">Schedule</th>
+                        <th scope="col">Products</th>
+                        <th scope="col">Add to Favorites</th>
+                      </tr>
+                    </thead>
+                    <tbody id="market-table">
+                    </tbody>
+
+                  </table>
+                </div>
+            </main>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <!-- Camera trigger -->
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close Form</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Bootstrap scripts-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/nationalMarkets.js"></script>
+</body>
+
+</html>
