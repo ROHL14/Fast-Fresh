@@ -7,7 +7,7 @@ module.exports = function (sequelize, DataTypes) {
             autoincrement: false
         },
         products: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(500),
             allowNull: true
         },
         address: {
@@ -23,13 +23,10 @@ module.exports = function (sequelize, DataTypes) {
     Market.associate = function (models) {
         Market.hasMany(models.Farmer, {
             onDelete: "cascade"
-        })
-    }
-
-    Market.associate = function (models) {
+        });
         Market.hasMany(models.Order, {
             onDelete: "cascade"
-        })
+        });
     }
 
     return Market;
