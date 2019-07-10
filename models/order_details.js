@@ -30,19 +30,19 @@ module.exports = function (sequelize, DataTypes) {
 
     OrderDetail.associate = function (models) {
         OrderDetail.belongsTo(models.Order, {
-            foreingKey: {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+
+        OrderDetail.belongsTo(models.Product, {
+            foreignKey: {
                 allowNull: false
             }
         });
     }
 
-    OrderDetail.associate = function (models) {
-        OrderDetail.belongsTo(models.Product, {
-            foreingKey: {
-                allowNull: false
-            }
-        });
-    }
+
 
     return OrderDetail;
 }

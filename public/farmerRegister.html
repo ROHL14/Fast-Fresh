@@ -48,6 +48,7 @@
             </div>
             <input id="name" name="" class="form-control" placeholder="Full Name/Bussiness Name" type="text" />
           </div>
+
           <!--form group-->
           <div class="form-group input-group">
             <div class="input-group-prepend">
@@ -92,8 +93,8 @@
                 <i class="fas fa-carrot"></i>
               </span>
             </div>
-            <select class="form-control">
-              <option selected="" id="category">
+            <select class="form-control" id="category">
+              <option value="">
                 Category of the products tha will provide</option>
               <option value="Fresh Fruits and Vegetables">Fresh Fruits and Vegetables</option>
               <option value="Fresh Animal Products">Fresh Animal Products</option>
@@ -102,6 +103,15 @@
               <option value="Inedible Products">Inedible Products</option>
               <option value="Homemade Food Products">Homemade Food Products</option>
             </select>
+          </div>
+          <!--form group-->
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-adn"></i>
+              </span>
+            </div>
+            <textarea id="brand" name="" class="form-control" placeholder="Bussines Ad" type="text" rows="3"></textarea>
           </div>
           <!--form group-->
           <div class="form-group input-group">
@@ -195,12 +205,11 @@
 
 
     <!--JQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 
     <!-- Bootstrap js -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"></script>

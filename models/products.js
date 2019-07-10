@@ -25,7 +25,7 @@ module.exports = function (sequelize, DataTypes) {
 
     /*Product.associate = function (models) {
         Product.belongsTo(models.Market, {
-            foreingKey: {
+            foreignKey: {
                 allowNull: false
             }
         });
@@ -33,17 +33,17 @@ module.exports = function (sequelize, DataTypes) {
 
     Product.associate = function (models) {
         Product.belongsTo(models.Farmer, {
-            foreingKey: {
+            foreignKey: {
                 allowNull: false
             }
         });
-    }
-    Product.associate = function (models) {
+
         Product.hasMany(models.OrderDetail, {
-            foreingKey: {
+            foreignKey: {
                 allowNull: false
             }
         });
     }
+
     return Product;
 }

@@ -23,18 +23,22 @@ $("#add").on("click", function (event) {
     state: $("#state").val(),
     telephone: $("#phone-number").val(),
     category: $("#category").val(),
-    brand: $("#comment").val(),
+    brand: $("#brand").val(),
     accout_number: $("#account-number").val(),
     account_status: true,
-    open_close: false
+    open_close: false,
+    marketId: $("#markets-list").val()
   };
 
-  const dataValid = validate(newFarmerAccount);
+  dataValid = validate(newFarmerAccount);
   if (dataValid) {
-    $.post("api/farmer", newFarmerAccount, function (farmerData) {
-      if (farmerData.success) {
-        $.get("/farmer-product", function (result) {
-          console.log(result);
+    console.log(newFarmerAccount);
+    $.post("/api/farmer", newFarmerAccount, function (farmerData) {
+      console.log(farmerData);
+      if (farmerData) {
+        console.log("sending get");
+        $.get("/farmer-product/" + farmerData.id, function (result) {
+          console.log('fail get' + result);
         });
       } else {
         console.log(farmerData.error);
@@ -68,8 +72,8 @@ function validate(data) {
     valid = errorModal("Please enter your password");
     $("#password").focus();
     return valid;
-  } else if (data.password !== $("#password-repeat")) {
-    valid = errorModal("Please enter your password");
+  } else if (data.password !== $("#password-repeat").val()) {
+    valid = errorModal("Password does not match");
     $("#password-repeat").focus();
     return valid;
   }
@@ -98,6 +102,7 @@ function validate(data) {
     return valid;
 
   }
+  return valid;
 }
 
 function errorModal(message) {
