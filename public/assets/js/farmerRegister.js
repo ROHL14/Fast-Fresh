@@ -1,8 +1,7 @@
-$(document).ready(function () {
+$(document).ready(function() {
   let marketList = $("#markets-list");
 
-  $.get("/api/markets", function (marketData) {
-
+  $.get("/api/markets", function(marketData) {
     marketData.forEach(element => {
       marketInfo = `${element.address}, ${element.schedule}`;
       marketList.append(`<option value = ${element.id}>${marketInfo}</option>`);
@@ -10,7 +9,7 @@ $(document).ready(function () {
   });
 });
 
-$("#add").on("click", function (event) {
+$("#add").on("click", function(event) {
   event.preventDefault();
 
   const newFarmerAccount = {
@@ -72,8 +71,8 @@ function validate(data) {
     valid = errorModal("Please enter your password");
     $("#password").focus();
     return valid;
-  } else if (data.password !== $("#password-repeat").val()) {
-    valid = errorModal("Password does not match");
+  } else if (data.password != $("#password-repeat").val()) {
+    valid = errorModal("Please enter your password");
     $("#password-repeat").focus();
     return valid;
   }
@@ -91,16 +90,14 @@ function validate(data) {
     valid = errorModal("Please enter the state");
     $("#state").focus();
     return valid;
-
   }
   const regeZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
-  const rege = regeZip.test(data.zip)
+  const rege = regeZip.test(data.zip);
 
   if (!rege) {
     valid = errorModal("Please enter a valid Zip Code");
     $("#zip").focus();
     return valid;
-
   }
   return valid;
 }

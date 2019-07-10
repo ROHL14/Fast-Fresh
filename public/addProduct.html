@@ -81,6 +81,20 @@
           <div class="form-group input-group">
             <div class="input-group-prepend">
               <span class="input-group-text">
+                <i class="fa fa-lock"></i>
+              </span>
+            </div>
+            <input
+              id="password-repeat"
+              class="form-control remove-edit"
+              placeholder="Repeat password"
+              type="password"
+            />
+          </div>
+          <!--form group-->
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
                 <i class="fa fa-phone"></i>
               </span>
             </div>
@@ -161,7 +175,7 @@
             </div>
             <input
               id="account-number"
-              placeholder="Account Numer for Payments"
+              placeholder="Account Number for Payments"
               class="form-control remove-edit"
               id="comment"
             />
@@ -191,7 +205,7 @@
           Add product
         </button>
 
-        <div class="products-section"></div>
+        <div class="row" id="product-area"></div>
 
         <!-- Modal -->
         <div
@@ -235,7 +249,7 @@
                               </span>
                             </div>
                             <input
-                              id="name"
+                              id="product-name"
                               name=""
                               class="form-control"
                               placeholder="Produc Name"
@@ -317,6 +331,46 @@
         </div>
       </div>
     </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade bd-example-modal-lg"
+      id="Modal-validation"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="ModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalTitle">Field Validation</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1 id="modal-error"></h1>
+          </div>
+          <div class="modal-footer">
+            <!-- Camera trigger -->
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Bootstrap js -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
