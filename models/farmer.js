@@ -63,22 +63,20 @@ module.exports = function (sequelize, DataTypes) {
         }
 
     });
-    Farmer.associate = function (models) {
-        Farmer.belongsTo = (models.Market, {
-            foreignKey: { allowNull: false }
-        })
-    }
+
+
     Farmer.associate = function (models) {
         Farmer.hasMany = (models.Product, {
             onDelete: "cascade"
         });
 
-    }
-    Farmer.associate = function (models) {
         Farmer.hasMany = (models.FarmerPayment, {
             onDelete: "cascade"
         });
 
+        Farmer.belongsTo(models.Market, {
+            foreignKey: { allowNull: false }
+        });
     }
 
     return Farmer;

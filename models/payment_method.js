@@ -55,7 +55,9 @@ module.exports = function (sequelize, DataTypes) {
 
     PaymentMethod.associate = function (models) {
         PaymentMethod.belongsTo(models.Customer, {
-            allowNull: false
+            foreignKey: {
+                allowNull: false
+            }
         });
     }
     return PaymentMethod;

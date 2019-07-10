@@ -66,16 +66,11 @@ module.exports = function (sequelize, DataTypes) {
     Customer.associate = function (models) {
         Customer.hasMany(models.PaymentMethod, {
             onDelete: "cascade"
-        })
-    }
-
-    Customer.associate = function (models) {
+        });
         Customer.hasMany(models.Order, {
             onDelete: "cascade"
-        })
+        });
     }
-
-
 
     return Customer;
 }

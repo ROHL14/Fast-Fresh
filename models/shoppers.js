@@ -62,12 +62,12 @@ module.exports = function (sequelize, DataTypes) {
         Shopper.hasMany = (models.Orders, {
             onDelete: "cascade"
         });
-    }
-    Shopper.associate = function (models) {
+
         Shopper.hasMany = (models.ShopperPayment, {
             onDelete: "cascade"
         });
     }
+
 
     return Shopper;
 }
