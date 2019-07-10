@@ -84,6 +84,8 @@ function validate(data) {
     $("#state").focus();
     return valid;
   }
+
+  return valid;
 }
 
 function errorModal(message) {
