@@ -61,15 +61,20 @@ $("#save-btn").on("click", function() {
     const productName = $("<p>" + newProduct.name + "</p>");
     const productPrice = $("<p>" + newProduct.price + "</p>");
     const productUnity = $("<p>" + newProduct.price_per + "</p>");
+    const deletBtn = $(
+      "<button id='delete'><i class='fas fa-trash-alt'></i></button>"
+    );
     const card = $("<div class='card'>");
-    card.append(img, productName, productPrice, productUnity);
+    card.append(img, productName, productPrice, productUnity, deletBtn);
     $("#product-area").append(card);
   }
 });
 
-function validation(data) {}
-
-/*function convertCanvasToImage(canvas) { 	var image = new Image(); 	image.src = canvas.toDataURL("image/png"); 	return image; }*/
+$("#product-area").on("click", "#delete", function() {
+  $(this)
+    .parent(".card")
+    .remove();
+});
 
 $("#edit-info").on("click", function(event) {
   event.preventDefault();
