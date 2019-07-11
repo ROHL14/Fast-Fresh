@@ -30,3 +30,20 @@ nav {
   width: 100%;
   margin-left: 1%;
 }
+
+#products-area {
+  width: 100%;
+  margin-top: 1vh;
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  margin: 5px;
+  width: 300px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
