@@ -24,10 +24,96 @@
     <title>Check out</title>
   </head>
   <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <a class="navbar-brand" href="index.html">F n F</a>
+    </nav>
+    <!--end Navbar-->
+    <br />
     <div class="row">
-      <div class="col-6"></div>
-      <div class="col-6"></div>
+      <div class="col-6">
+        <div id="order-detail" class="card mx-auto" style="width: 40rem;">
+          <div class="card-body ml-3">
+            <h2 class="card-title">Order Detail</h2>
+            <div id="product-section">
+              <div class="row product">
+                <div class="col-6">
+                  <h5 class="card-text">Product 1</h5>
+                </div>
+                <div class="col-6">
+                  <h5 class="card-text">
+                    price
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div class="row product">
+              <div class="col-6">
+                <h4 class="card-text">Taxes</h4>
+              </div>
+              <div class="col-6" id="taxes"></div>
+            </div>
+            <div class="row product">
+              <div class="col-6">
+                <h4 class="card-text">Back fee</h4>
+              </div>
+              <div class="col-6" id="back-fee"></div>
+            </div>
+            <div class="row product">
+              <div class="col-6">
+                <h3 class="card-text">Total</h3>
+              </div>
+              <div class="col-6" id="total-price"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div id="payment" class="card mx-auto" style="width: 40rem;">
+          <div class="card-body">
+            <h2 class="card-title">Payment</h2>
+          </div>
+          <br />
+          <br />
+          <div class="card-body">
+            <div class="row">
+              <h5 class="ml-3">Payment method 1</h5>
+              <div class="custom-control custom-radio ml-auto">
+                <input
+                  type="radio"
+                  id="customRadio1"
+                  name="customRadio"
+                  class="custom-control-input"
+                />
+                <label class="custom-control-label" for="customRadio1"></label>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <h5 class="ml-3">Payment method 2</h5>
+              <div class="custom-control custom-radio ml-auto">
+                <input
+                  type="radio"
+                  id="customRadio2"
+                  name="customRadio"
+                  class="custom-control-input"
+                />
+                <label class="custom-control-label" for="customRadio2"></label>
+              </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="row">
+              <button class="btn btn-primary mx-auto">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <!--JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
