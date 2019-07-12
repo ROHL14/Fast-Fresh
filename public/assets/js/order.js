@@ -52,9 +52,9 @@ window.onload = function() {
     $("#product-section").append(row);
   });
   let taxes = total * 0.0625;
-  let backFee = total * 0.03;
-  total = total + taxes + backFee;
-  $("#taxes").append(`<h4 class="card-text">$${taxes.toFixed(2)}</h4>`);
-  $("#back-fee").append(`<h4 class="card-text">$${backFee.toFixed(2)}</h4>`);
+  let packFee = total * 0.03;
+  total = total + taxes + packFee;
+  $("#taxes").append(`<h5 class="card-text">$${taxes.toFixed(2)}</h5>`);
+  $("#pack-fee").append(`<h5 class="card-text">$${packFee.toFixed(2)}</h5>`);
   $("#total-price").append(`<h3 class="card-text">$${total.toFixed(2)}</h3>`);
 };
